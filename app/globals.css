@@ -1,28 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #f5f0e7;
-  --foreground: #1f1f19;
-  --ring: #274c32;
-  --sand-50: #faf6ef;
-  --sand-100: #efe6d8;
-  --sand-200: #e1d2b8;
-  --sand-300: #cfb997;
-  --stone-700: #625a4f;
-  --stone-900: #1d1c17;
-  --forest-500: #54724d;
-  --forest-700: #274c32;
-  --forest-800: #203f29;
-  --clay-500: #b86f47;
-  --lake-400: #7cb7ba;
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
 }
 
 * {
-  border-color: rgb(255 255 255 / 0.16);
+  @apply border-border;
 }
 
 html {
@@ -30,34 +34,10 @@ html {
 }
 
 body {
+  @apply bg-background text-foreground;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top, rgb(124 183 186 / 0.16), transparent 30%),
-    linear-gradient(180deg, #f6f1e8 0%, #f4efe6 30%, #efe7da 100%);
-  color: var(--foreground);
-}
-
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
-  font-size: 1.25rem;
-  line-height: 1;
 }
 
 .text-balance {
   text-wrap: balance;
-}
-
-.photo-frame {
-  position: relative;
-  overflow: hidden;
-  border-radius: 2rem;
-  border: 1px solid rgb(255 255 255 / 0.6);
-}
-
-.photo-frame::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgb(20 28 20 / 0.3) 100%);
-  content: "";
-  pointer-events: none;
 }
